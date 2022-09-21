@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= 'To do List'
+  body
+    h1= TodoListtitle
+    form(action='/add' method='post')
+      p
+        label(for='content') 할 일 추가: 
+        input(type='text' name='content' autocomplete='off')
+        input(type='submit' value='추가하기')
+      p
+        ul
+          each val in TodoList 
+            li= val
